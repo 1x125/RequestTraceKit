@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "使用说明";
+}
+
+<h2>使用说明</h2>
+<p>请在需要统计的页面引入一下javascript代码</p>
+<div class="alert alert-info alert-dismissible fade show">
+    <pre>
+ &lt;script type="text/javascript"&gt;
+    window.wext = window.wext || {};
+    (function () {
+        var qs = [];
+        var siteId = 1;//站点Id由网站统计服务提供
+        var u = '@Request.Scheme://@Request.Host.Value/trace.js';
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.id = 'wlyctracejs'; g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u;
+        g.setAttribute("siteId",siteId);
+        var hg = d.getElementById(g.id);
+        console.log(hg);
+        if (hg) {
+            hg.remove();
+        }
+        s.parentNode.insertBefore(g, s);
+    })();
+ &lt;script&gt;
+</pre>
+</div>
