@@ -1,9 +1,3 @@
-/*
-MySQL Backup
-Database: Trace
-Backup Time: 2021-10-18 16:44:40
-*/
-
 SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `Trace`.`clickconfig`;
 DROP TABLE IF EXISTS `Trace`.`website`;

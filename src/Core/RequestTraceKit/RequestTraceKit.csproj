@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName />
+    <Authors>lixinglun</Authors>
+    <Product>RequestTraceKit</Product>
+    <Description>RequestTraceKit--WebAPI请求数据记录和网站数据统计</Description>
+    <PackageProjectUrl>https://github.com/1x125/RequestTraceKit.git</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/1x125/RequestTraceKit.git</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

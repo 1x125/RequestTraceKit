@@ -43,7 +43,7 @@ namespace RequestTrace.Web
             services.AddRazorPages();
             services.AddRequestTraceService(options =>
             {
-                options.ConnectionString = "Server=192.168.200.170;Port=3306;Initial Catalog = Trace;Uid = root;Pwd =123456;Allow User Variables=true;";
+                options.ConnectionString = "Server=localhost;Port=3306;Initial Catalog = Trace;Uid = root;Pwd =123456;Allow User Variables=true;";
                 options.PageStayTimeRules = new List<string> { "/"};
             });
         }
@@ -65,7 +65,7 @@ namespace RequestTrace.Web
             app.UseRouting();
             //允许跨域请求
             app.UseCors(MyAllowSpecificOrigins);
-            //app.UseAuthorization();
+            //配置trace.js中间件
             app.UseRequestTraceJS();
 
             app.UseEndpoints(endpoints =>
