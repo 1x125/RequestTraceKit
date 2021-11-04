@@ -46,7 +46,7 @@ namespace RequestTraceKit
         /// <summary>
         /// 需要记录的Cookie名称
         /// </summary>
-        public string CookieName { get; set; } = "TraceDefault";
+        public string CookieName { get; set; } = "MyCookies";
 
         /// <summary>
         /// 需要统计停留时间的URL地址

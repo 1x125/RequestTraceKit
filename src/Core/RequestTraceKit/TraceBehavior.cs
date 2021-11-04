@@ -160,7 +160,7 @@ namespace RequestTraceKit
                 HostIP = httpContext.Connection.LocalIpAddress.MapToIPv4().ToString(),
                 HostPort = httpContext.Connection.LocalPort
             };
-            if (!httpContext.Request.Cookies.ContainsKey(_option.Value.CookieName))
+            if (!httpContext.Request.Cookies.ContainsKey(_option.Value.CookieName) && !httpContext.Response.HasStarted)
             {
                 var cookie = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
                 httpContext.Response.Cookies.Append(_option.Value.CookieName, cookie, new CookieOptions()

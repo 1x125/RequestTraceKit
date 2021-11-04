@@ -21,7 +21,7 @@ namespace RequestTraceKit
                 return;
             }
             TraceInfo info = new TraceInfo(traceOption);
-            context.HttpContext.Items["WLYC_RequestTrace"] = info;
+            context.HttpContext.Items["RequestTrace"] = info;
             info.Start();
         }
 
@@ -33,7 +33,7 @@ namespace RequestTraceKit
             {
                 return;
             }
-            TraceInfo info = context.HttpContext.Items["WLYC_RequestTrace"] as TraceInfo;
+            TraceInfo info = context.HttpContext.Items["RequestTrace"] as TraceInfo;
             if (info != null)
             {
                 info.ActionEnd(context.Exception != null);
@@ -47,7 +47,7 @@ namespace RequestTraceKit
             {
                 return;
             }
-            TraceInfo info = context.HttpContext.Items["WLYC_RequestTrace"] as TraceInfo;
+            TraceInfo info = context.HttpContext.Items["RequestTrace"] as TraceInfo;
             if (info != null)
             {
                 info.ViewBegin();
@@ -65,7 +65,7 @@ namespace RequestTraceKit
             {
                 return;
             }
-            TraceInfo info = context.HttpContext.Items["WLYC_RequestTrace"] as TraceInfo;
+            TraceInfo info = context.HttpContext.Items["RequestTrace"] as TraceInfo;
             if (info != null)
             {
                 info.Stop(context.Exception != null);
