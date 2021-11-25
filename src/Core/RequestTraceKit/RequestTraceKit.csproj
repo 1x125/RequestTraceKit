@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName />
     <Authors>lixinglun</Authors>
     <Product>RequestTraceKit</Product>
@@ -9,8 +9,8 @@
     <PackageProjectUrl>https://github.com/1x125/RequestTraceKit.git</PackageProjectUrl>
     <RepositoryUrl>https://github.com/1x125/RequestTraceKit.git</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
-    <PackageReleaseNotes>修复统计cookie报错问题</PackageReleaseNotes>
+    <Version>3.0.1</Version>
+    <PackageReleaseNotes>新增.net core 3.1版本支持</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
