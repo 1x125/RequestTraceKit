@@ -9,6 +9,8 @@
     <PackageProjectUrl>https://github.com/1x125/RequestTraceKit.git</PackageProjectUrl>
     <RepositoryUrl>https://github.com/1x125/RequestTraceKit.git</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>修复统计cookie报错问题</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
