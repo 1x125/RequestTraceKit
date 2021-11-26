@@ -58,6 +58,8 @@ namespace demo.web
 
             app.UseAuthorization();
 
+            //ÅäÖÃtrace.jsÖÐ¼ä¼þ
+            app.UseRequestTraceJS();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
