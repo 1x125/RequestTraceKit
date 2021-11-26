@@ -1,4 +1,4 @@
-﻿/*统计js源文件 */
+﻿/*统计js源文件，使用时请注入中间件： app.UseRequestTraceJS(); */
 window.dca_trace_url = 'http://192.168.200.170:6230';
 window.init_page_stay = function (traceId) {
     window.page_stay_second = 0;

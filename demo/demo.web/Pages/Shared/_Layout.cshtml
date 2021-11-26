@@ -6,6 +6,23 @@
     <title>@ViewData["Title"] - demo.web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script type="text/javascript">
+        window.wext = window.wext || {};
+    (function () {
+        var qs = [];
+        var siteId = 1;//站点Id由网站统计服务提供
+        var u = '@Context.Request.Scheme://@Context.Request.Host.Value/trace.js';
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.id = 'wlyctracejs'; g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u;
+        g.setAttribute("siteId",siteId);
+        var hg = d.getElementById(g.id);
+        console.log(hg);
+        if (hg) {
+            hg.remove();
+        }
+        s.parentNode.insertBefore(g, s);
+    })();
+    </script>
 </head>
 <body>
     <header>

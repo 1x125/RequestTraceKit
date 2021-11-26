@@ -13,7 +13,7 @@
     (function () {
         var qs = [];
         var siteId = 1;//站点Id由网站统计服务提供
-        var u = '@Request.Scheme://@Request.Host.Value/trace.js';
+        var u = '@Request.Scheme://@Request.Host.Value/trace.js';//需要注入app.UseRequestTraceJS()中间件，内嵌到web中使用。也可以单独部署一套统计服务。
         var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
         g.id = 'wlyctracejs'; g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u;
         g.setAttribute("siteId",siteId);
